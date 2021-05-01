@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Skizzo! Sborra sui tuoi log!</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Skizzo! Sborra sui tuoi log!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
-    <body>
-	<div class="topnav">
-        <div class="search-container">
-            <a class="active" href="#home">Home</a>
-            <a href="#upload">Upload</a>
-            <input type="text" placeholder="Search..">
-            <button type="submit"><i class="fa fa-search"></i></button>
+
+<body>
+    <div id="head-container">
+        <div id="nav-container">
+            <a class="active" id="home" onclick="activate(this)" href="#home">Home</a>
+            <a class="inactive" id="about" onclick="activate(this)" href="#about">About</a>
+            <a class="inactive" id="logout" onclick="activate(this)" href="#logout">Logout</a>
         </div>
-	</div>
-	<h1>Skizzo!</h1>	
-    </body>		
+        <div id="search-container">
+            <input id="search-bar" type="text" placeholder="Search..">
+            <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+    <div id="main-container">
+        <label for="log">Upload a log:</label>
+        <input type="file" id="log">
+        <textarea id="text-area"></textarea>
+    </div>
+</body>
+<script src="app.js"></script>
+
 </html>
